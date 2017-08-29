@@ -2,26 +2,27 @@ package facisa.si.p3.visibilidade;
 
 public class Funcionario {
 
-	/**
+	/**@author jhonata
 	 * @param args
+	 * 
 	 */
 		private static Funcionario INSTANCIA = new Funcionario();
 		protected String nome;
 		protected String cpf;
 		protected double salario;
 		
-		
+
 		//Método público estático realizando o primeiro e único acesso necessário nesse tipo de aplicação
 		public static Funcionario getInstancia(){
 			return INSTANCIA;
 		}
 		
-		
-		public double getBonificacao(){
+		//Aplicando a visibilidade para que apenas a classe pai consiga ver o método getBonificação
+		private double getBonificacao(){
 			return this.salario * 0.10;
 		}
 
-
+		//Método que instancia um funcionário
 		public static Funcionario getINSTANCIA() {
 			return INSTANCIA;
 		}
